@@ -89,6 +89,12 @@ namespace Calculator_20_42161_1_
                     calcTB.Text = calcTB.Text + "1";
                 }
             }
+            else
+            {   
+                calcTB.Clear();
+                calcTB.Text = oneBTN.Text;
+                calcDone = false;
+            }
             
         }
         private void zeroBTN_Click(object sender, EventArgs e)
@@ -116,6 +122,12 @@ namespace Calculator_20_42161_1_
                     //do nothing
                 }
             }
+            else
+            {
+                calcTB.Clear();
+                calcTB.Text = zeroBTN.Text;
+                calcDone = false;
+            }
         }
 
         private void twoBTN_Click(object sender, EventArgs e)
@@ -130,6 +142,12 @@ namespace Calculator_20_42161_1_
                 {
                     calcTB.Text = calcTB.Text + "2";
                 }
+            }
+            else
+            {
+                calcTB.Clear();
+                calcTB.Text = twoBTN.Text;
+                calcDone = false;
             }
         }
 
@@ -146,6 +164,12 @@ namespace Calculator_20_42161_1_
                     calcTB.Text = calcTB.Text + "3";
                 }
             }
+            else
+            {
+                calcTB.Clear();
+                calcTB.Text = threeBTN.Text;
+                calcDone = false;
+            }
         }
 
         private void fourBTN_Click(object sender, EventArgs e)
@@ -160,6 +184,12 @@ namespace Calculator_20_42161_1_
                 {
                     calcTB.Text = calcTB.Text + "4";
                 }
+            }
+            else
+            {
+                calcTB.Clear();
+                calcTB.Text = fourBTN.Text;
+                calcDone = false;
             }
         }
 
@@ -176,6 +206,12 @@ namespace Calculator_20_42161_1_
                     calcTB.Text = calcTB.Text + "5";
                 }
             }
+            else
+            {
+                calcTB.Clear();
+                calcTB.Text = fiveBTN.Text;
+                calcDone = false;
+            }
         }
 
         private void sixBTN_Click(object sender, EventArgs e)
@@ -190,6 +226,12 @@ namespace Calculator_20_42161_1_
                 {
                     calcTB.Text = calcTB.Text + "6";
                 }
+            }
+            else
+            {
+                calcTB.Clear();
+                calcTB.Text = sixBTN.Text;
+                calcDone = false;
             }
         }
 
@@ -206,6 +248,12 @@ namespace Calculator_20_42161_1_
                     calcTB.Text = calcTB.Text + "7";
                 }
             }
+            else
+            {
+                calcTB.Clear();
+                calcTB.Text = sevenBTN.Text;
+                calcDone = false;
+            }
         }
 
         private void eightBTN_Click(object sender, EventArgs e)
@@ -221,6 +269,12 @@ namespace Calculator_20_42161_1_
                     calcTB.Text = calcTB.Text + "8";
                 }
             }
+            else
+            {
+                calcTB.Clear();
+                calcTB.Text = eightBTN.Text;
+                calcDone = false;
+            }
         }
 
         private void nineBTN_Click(object sender, EventArgs e)
@@ -235,6 +289,12 @@ namespace Calculator_20_42161_1_
                 {
                     calcTB.Text = calcTB.Text + "9";
                 }
+            }
+            else
+            {
+                calcTB.Clear();
+                calcTB.Text = nineBTN.Text;
+                calcDone = false;
             }
         }
 
@@ -255,6 +315,12 @@ namespace Calculator_20_42161_1_
                 {
                     calcTB.Text = calcTB.Text + ".";
                 }
+            }
+            else
+            {
+                calcTB.Clear();
+                calcTB.Text = pointBTN.Text;
+                calcDone = false;
             }
         }
 
@@ -306,6 +372,7 @@ namespace Calculator_20_42161_1_
                 historyLB.Text = labelhist;
                 Operation = '/';
                 calcTB.Clear();
+                calcDone = false;
             }
         }
 
@@ -330,6 +397,7 @@ namespace Calculator_20_42161_1_
                 historyLB.Text = labelhist;
                 Operation = '+';
                 calcTB.Clear();
+                calcDone = false;
             }
         }
 
@@ -362,6 +430,7 @@ namespace Calculator_20_42161_1_
                 historyLB.Text = labelhist;
                 Operation = '*';
                 calcTB.Clear();
+                calcDone = false;
             }
         }
 
@@ -374,6 +443,7 @@ namespace Calculator_20_42161_1_
                 historyLB.Text = labelhist;
                 Operation = '-';
                 calcTB.Clear();
+                calcDone = false;
             }
         }
 
@@ -398,6 +468,7 @@ namespace Calculator_20_42161_1_
                 historyLB.Text = labelhist;
                 Operation = '%';
                 calcTB.Clear();
+                calcDone = false;
             }
         }
 
@@ -411,31 +482,36 @@ namespace Calculator_20_42161_1_
                     float result = Value1 / Value2;
                     historyLB.Text = historyLB.Text + " " + Value2 + " =";
                     calcTB.Text = result.ToString();
+                    calcDone = true;
                 }
                 else if (Operation=='+')
                 {
                     float result = Value1 + Value2;
                     historyLB.Text = historyLB.Text + " " + Value2 + " =";
                     calcTB.Text = result.ToString();
+                    calcDone = true;
                 }
                 else if (Operation == '*')
                 {
                     float result = Value1 * Value2;
                     historyLB.Text = historyLB.Text + " " + Value2 + " =";
                     calcTB.Text = result.ToString();
+                    calcDone = true;
                 }
                 else if (Operation == '-')
                 {
                     float result = Value1 - Value2;
                     historyLB.Text = historyLB.Text + " " + Value2 + " =";
                     calcTB.Text = result.ToString();
+                    calcDone = true;
                 }
                 else if (Operation == '%')
                 {
                     Value2 = Value2 / 100;
                     float result = Value1 * Value2;
-                    historyLB.Text = historyLB.Text + " " + Value2 + " =";
+                    historyLB.Text = historyLB.Text + " " + Value2*100 + " =";
                     calcTB.Text = result.ToString();
+                    calcDone = true;
                 }
             }
         }
