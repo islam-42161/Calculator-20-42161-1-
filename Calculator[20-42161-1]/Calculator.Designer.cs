@@ -54,8 +54,8 @@ namespace Calculator_20_42161_1_
             this.clearentireBTN = new System.Windows.Forms.Button();
             this.clearBTN = new System.Windows.Forms.Button();
             this.backspaceBTN = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.calcTB = new System.Windows.Forms.TextBox();
+            this.historyLB = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // plusminusBTN
@@ -71,6 +71,7 @@ namespace Calculator_20_42161_1_
             this.plusminusBTN.TabIndex = 0;
             this.plusminusBTN.Text = "±";
             this.plusminusBTN.UseVisualStyleBackColor = false;
+            this.plusminusBTN.Click += new System.EventHandler(this.plusminusBTN_Click);
             // 
             // zeroBTN
             // 
@@ -115,6 +116,7 @@ namespace Calculator_20_42161_1_
             this.equalsBTN.TabIndex = 3;
             this.equalsBTN.Text = "=";
             this.equalsBTN.UseVisualStyleBackColor = false;
+            this.equalsBTN.Click += new System.EventHandler(this.equalsBTN_Click);
             // 
             // oneBTN
             // 
@@ -261,6 +263,7 @@ namespace Calculator_20_42161_1_
             this.plusBTN.TabIndex = 13;
             this.plusBTN.Text = "+";
             this.plusBTN.UseVisualStyleBackColor = true;
+            this.plusBTN.Click += new System.EventHandler(this.plusBTN_Click);
             // 
             // minusBTN
             // 
@@ -272,6 +275,7 @@ namespace Calculator_20_42161_1_
             this.minusBTN.TabIndex = 14;
             this.minusBTN.Text = "-";
             this.minusBTN.UseVisualStyleBackColor = true;
+            this.minusBTN.Click += new System.EventHandler(this.minusBTN_Click);
             // 
             // multiBTN
             // 
@@ -283,6 +287,7 @@ namespace Calculator_20_42161_1_
             this.multiBTN.TabIndex = 15;
             this.multiBTN.Text = "×";
             this.multiBTN.UseVisualStyleBackColor = true;
+            this.multiBTN.Click += new System.EventHandler(this.multiBTN_Click);
             // 
             // divideBTN
             // 
@@ -294,6 +299,7 @@ namespace Calculator_20_42161_1_
             this.divideBTN.TabIndex = 16;
             this.divideBTN.Text = "÷";
             this.divideBTN.UseVisualStyleBackColor = true;
+            this.divideBTN.Click += new System.EventHandler(this.divideBTN_Click);
             // 
             // rootBTN
             // 
@@ -305,6 +311,7 @@ namespace Calculator_20_42161_1_
             this.rootBTN.TabIndex = 17;
             this.rootBTN.Text = "√";
             this.rootBTN.UseVisualStyleBackColor = true;
+            this.rootBTN.Click += new System.EventHandler(this.rootBTN_Click);
             // 
             // squareBTN
             // 
@@ -316,6 +323,7 @@ namespace Calculator_20_42161_1_
             this.squareBTN.TabIndex = 18;
             this.squareBTN.Text = "Square";
             this.squareBTN.UseVisualStyleBackColor = true;
+            this.squareBTN.Click += new System.EventHandler(this.squareBTN_Click);
             // 
             // onebyxBTN
             // 
@@ -327,6 +335,7 @@ namespace Calculator_20_42161_1_
             this.onebyxBTN.TabIndex = 19;
             this.onebyxBTN.Text = "1/x";
             this.onebyxBTN.UseVisualStyleBackColor = true;
+            this.onebyxBTN.Click += new System.EventHandler(this.onebyxBTN_Click);
             // 
             // percentBTN
             // 
@@ -338,6 +347,7 @@ namespace Calculator_20_42161_1_
             this.percentBTN.TabIndex = 20;
             this.percentBTN.Text = "%";
             this.percentBTN.UseVisualStyleBackColor = true;
+            this.percentBTN.Click += new System.EventHandler(this.percentBTN_Click);
             // 
             // clearentireBTN
             // 
@@ -349,6 +359,7 @@ namespace Calculator_20_42161_1_
             this.clearentireBTN.TabIndex = 21;
             this.clearentireBTN.Text = "CE";
             this.clearentireBTN.UseVisualStyleBackColor = true;
+            this.clearentireBTN.Click += new System.EventHandler(this.clearentireBTN_Click);
             // 
             // clearBTN
             // 
@@ -375,16 +386,6 @@ namespace Calculator_20_42161_1_
             this.backspaceBTN.UseVisualStyleBackColor = true;
             this.backspaceBTN.Click += new System.EventHandler(this.backspaceBTN_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(279, 29);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(125, 17);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Calculation History";
-            // 
             // calcTB
             // 
             this.calcTB.BackColor = System.Drawing.SystemColors.Control;
@@ -392,6 +393,7 @@ namespace Calculator_20_42161_1_
             this.calcTB.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.calcTB.Font = new System.Drawing.Font("Segoe UI Semibold", 34.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calcTB.Location = new System.Drawing.Point(12, 63);
+            this.calcTB.Margin = new System.Windows.Forms.Padding(20);
             this.calcTB.Name = "calcTB";
             this.calcTB.Size = new System.Drawing.Size(380, 78);
             this.calcTB.TabIndex = 26;
@@ -399,13 +401,24 @@ namespace Calculator_20_42161_1_
             this.calcTB.TextChanged += new System.EventHandler(this.calcTB_TextChanged);
             this.calcTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.calcTB_KeyPress);
             // 
+            // historyLB
+            // 
+            this.historyLB.BackColor = System.Drawing.SystemColors.Control;
+            this.historyLB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.historyLB.Location = new System.Drawing.Point(12, 29);
+            this.historyLB.Name = "historyLB";
+            this.historyLB.Size = new System.Drawing.Size(380, 15);
+            this.historyLB.TabIndex = 27;
+            this.historyLB.Text = "Calculation History";
+            this.historyLB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(404, 583);
+            this.Controls.Add(this.historyLB);
             this.Controls.Add(this.calcTB);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.backspaceBTN);
             this.Controls.Add(this.clearBTN);
             this.Controls.Add(this.clearentireBTN);
@@ -468,8 +481,8 @@ namespace Calculator_20_42161_1_
         private System.Windows.Forms.Button clearentireBTN;
         private System.Windows.Forms.Button clearBTN;
         private System.Windows.Forms.Button backspaceBTN;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox calcTB;
+        private System.Windows.Forms.TextBox historyLB;
     }
 }
 
