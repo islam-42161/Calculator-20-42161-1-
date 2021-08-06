@@ -45,15 +45,15 @@ namespace Calculator_20_42161_1_
             this.nineBTN = new System.Windows.Forms.Button();
             this.plusBTN = new System.Windows.Forms.Button();
             this.minusBTN = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
+            this.multiBTN = new System.Windows.Forms.Button();
+            this.divideBTN = new System.Windows.Forms.Button();
+            this.rootBTN = new System.Windows.Forms.Button();
+            this.squareBTN = new System.Windows.Forms.Button();
+            this.onebyxBTN = new System.Windows.Forms.Button();
+            this.percentBTN = new System.Windows.Forms.Button();
+            this.clearentireBTN = new System.Windows.Forms.Button();
+            this.clearBTN = new System.Windows.Forms.Button();
+            this.backspaceBTN = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.calcTB = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -85,6 +85,7 @@ namespace Calculator_20_42161_1_
             this.zeroBTN.TabIndex = 1;
             this.zeroBTN.Text = "0";
             this.zeroBTN.UseVisualStyleBackColor = false;
+            this.zeroBTN.Click += new System.EventHandler(this.zeroBTN_Click);
             // 
             // pointBTN
             // 
@@ -99,6 +100,7 @@ namespace Calculator_20_42161_1_
             this.pointBTN.TabIndex = 2;
             this.pointBTN.Text = ".";
             this.pointBTN.UseVisualStyleBackColor = false;
+            this.pointBTN.Click += new System.EventHandler(this.pointBTN_Click);
             // 
             // equalsBTN
             // 
@@ -142,6 +144,7 @@ namespace Calculator_20_42161_1_
             this.twoBTN.TabIndex = 5;
             this.twoBTN.Text = "2";
             this.twoBTN.UseVisualStyleBackColor = false;
+            this.twoBTN.Click += new System.EventHandler(this.twoBTN_Click);
             // 
             // threeBTN
             // 
@@ -156,6 +159,7 @@ namespace Calculator_20_42161_1_
             this.threeBTN.TabIndex = 6;
             this.threeBTN.Text = "3";
             this.threeBTN.UseVisualStyleBackColor = false;
+            this.threeBTN.Click += new System.EventHandler(this.threeBTN_Click);
             // 
             // fourBTN
             // 
@@ -170,6 +174,7 @@ namespace Calculator_20_42161_1_
             this.fourBTN.TabIndex = 7;
             this.fourBTN.Text = "4";
             this.fourBTN.UseVisualStyleBackColor = false;
+            this.fourBTN.Click += new System.EventHandler(this.fourBTN_Click);
             // 
             // fiveBTN
             // 
@@ -184,6 +189,7 @@ namespace Calculator_20_42161_1_
             this.fiveBTN.TabIndex = 8;
             this.fiveBTN.Text = "5";
             this.fiveBTN.UseVisualStyleBackColor = false;
+            this.fiveBTN.Click += new System.EventHandler(this.fiveBTN_Click);
             // 
             // sixBTN
             // 
@@ -198,6 +204,7 @@ namespace Calculator_20_42161_1_
             this.sixBTN.TabIndex = 9;
             this.sixBTN.Text = "6";
             this.sixBTN.UseVisualStyleBackColor = false;
+            this.sixBTN.Click += new System.EventHandler(this.sixBTN_Click);
             // 
             // sevenBTN
             // 
@@ -212,6 +219,7 @@ namespace Calculator_20_42161_1_
             this.sevenBTN.TabIndex = 10;
             this.sevenBTN.Text = "7";
             this.sevenBTN.UseVisualStyleBackColor = false;
+            this.sevenBTN.Click += new System.EventHandler(this.sevenBTN_Click);
             // 
             // eightBTN
             // 
@@ -226,6 +234,7 @@ namespace Calculator_20_42161_1_
             this.eightBTN.TabIndex = 11;
             this.eightBTN.Text = "8";
             this.eightBTN.UseVisualStyleBackColor = false;
+            this.eightBTN.Click += new System.EventHandler(this.eightBTN_Click);
             // 
             // nineBTN
             // 
@@ -240,6 +249,7 @@ namespace Calculator_20_42161_1_
             this.nineBTN.TabIndex = 12;
             this.nineBTN.Text = "9";
             this.nineBTN.UseVisualStyleBackColor = false;
+            this.nineBTN.Click += new System.EventHandler(this.nineBTN_Click);
             // 
             // plusBTN
             // 
@@ -263,105 +273,107 @@ namespace Calculator_20_42161_1_
             this.minusBTN.Text = "-";
             this.minusBTN.UseVisualStyleBackColor = true;
             // 
-            // button15
+            // multiBTN
             // 
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.Font = new System.Drawing.Font("Segoe UI Light", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.Location = new System.Drawing.Point(306, 323);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(94, 59);
-            this.button15.TabIndex = 15;
-            this.button15.Text = "×";
-            this.button15.UseVisualStyleBackColor = true;
+            this.multiBTN.FlatAppearance.BorderSize = 0;
+            this.multiBTN.Font = new System.Drawing.Font("Segoe UI Light", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.multiBTN.Location = new System.Drawing.Point(306, 323);
+            this.multiBTN.Name = "multiBTN";
+            this.multiBTN.Size = new System.Drawing.Size(94, 59);
+            this.multiBTN.TabIndex = 15;
+            this.multiBTN.Text = "×";
+            this.multiBTN.UseVisualStyleBackColor = true;
             // 
-            // button16
+            // divideBTN
             // 
-            this.button16.FlatAppearance.BorderSize = 0;
-            this.button16.Font = new System.Drawing.Font("Segoe UI Light", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.Location = new System.Drawing.Point(306, 258);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(94, 59);
-            this.button16.TabIndex = 16;
-            this.button16.Text = "÷";
-            this.button16.UseVisualStyleBackColor = true;
+            this.divideBTN.FlatAppearance.BorderSize = 0;
+            this.divideBTN.Font = new System.Drawing.Font("Segoe UI Light", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.divideBTN.Location = new System.Drawing.Point(306, 258);
+            this.divideBTN.Name = "divideBTN";
+            this.divideBTN.Size = new System.Drawing.Size(94, 59);
+            this.divideBTN.TabIndex = 16;
+            this.divideBTN.Text = "÷";
+            this.divideBTN.UseVisualStyleBackColor = true;
             // 
-            // button17
+            // rootBTN
             // 
-            this.button17.FlatAppearance.BorderSize = 0;
-            this.button17.Font = new System.Drawing.Font("Segoe UI Light", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.Location = new System.Drawing.Point(205, 258);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(96, 59);
-            this.button17.TabIndex = 17;
-            this.button17.Text = "√";
-            this.button17.UseVisualStyleBackColor = true;
+            this.rootBTN.FlatAppearance.BorderSize = 0;
+            this.rootBTN.Font = new System.Drawing.Font("Segoe UI Light", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rootBTN.Location = new System.Drawing.Point(205, 258);
+            this.rootBTN.Name = "rootBTN";
+            this.rootBTN.Size = new System.Drawing.Size(96, 59);
+            this.rootBTN.TabIndex = 17;
+            this.rootBTN.Text = "√";
+            this.rootBTN.UseVisualStyleBackColor = true;
             // 
-            // button18
+            // squareBTN
             // 
-            this.button18.FlatAppearance.BorderSize = 0;
-            this.button18.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.Location = new System.Drawing.Point(106, 258);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(98, 59);
-            this.button18.TabIndex = 18;
-            this.button18.Text = "Square";
-            this.button18.UseVisualStyleBackColor = true;
+            this.squareBTN.FlatAppearance.BorderSize = 0;
+            this.squareBTN.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.squareBTN.Location = new System.Drawing.Point(106, 258);
+            this.squareBTN.Name = "squareBTN";
+            this.squareBTN.Size = new System.Drawing.Size(98, 59);
+            this.squareBTN.TabIndex = 18;
+            this.squareBTN.Text = "Square";
+            this.squareBTN.UseVisualStyleBackColor = true;
             // 
-            // button19
+            // onebyxBTN
             // 
-            this.button19.FlatAppearance.BorderSize = 0;
-            this.button19.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.Location = new System.Drawing.Point(9, 258);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(96, 59);
-            this.button19.TabIndex = 19;
-            this.button19.Text = "1/x";
-            this.button19.UseVisualStyleBackColor = true;
+            this.onebyxBTN.FlatAppearance.BorderSize = 0;
+            this.onebyxBTN.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.onebyxBTN.Location = new System.Drawing.Point(9, 258);
+            this.onebyxBTN.Name = "onebyxBTN";
+            this.onebyxBTN.Size = new System.Drawing.Size(96, 59);
+            this.onebyxBTN.TabIndex = 19;
+            this.onebyxBTN.Text = "1/x";
+            this.onebyxBTN.UseVisualStyleBackColor = true;
             // 
-            // button20
+            // percentBTN
             // 
-            this.button20.FlatAppearance.BorderSize = 0;
-            this.button20.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.Location = new System.Drawing.Point(9, 193);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(97, 59);
-            this.button20.TabIndex = 20;
-            this.button20.Text = "%";
-            this.button20.UseVisualStyleBackColor = true;
+            this.percentBTN.FlatAppearance.BorderSize = 0;
+            this.percentBTN.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.percentBTN.Location = new System.Drawing.Point(9, 193);
+            this.percentBTN.Name = "percentBTN";
+            this.percentBTN.Size = new System.Drawing.Size(97, 59);
+            this.percentBTN.TabIndex = 20;
+            this.percentBTN.Text = "%";
+            this.percentBTN.UseVisualStyleBackColor = true;
             // 
-            // button21
+            // clearentireBTN
             // 
-            this.button21.FlatAppearance.BorderSize = 0;
-            this.button21.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button21.Location = new System.Drawing.Point(108, 193);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(96, 59);
-            this.button21.TabIndex = 21;
-            this.button21.Text = "CE";
-            this.button21.UseVisualStyleBackColor = true;
+            this.clearentireBTN.FlatAppearance.BorderSize = 0;
+            this.clearentireBTN.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearentireBTN.Location = new System.Drawing.Point(108, 193);
+            this.clearentireBTN.Name = "clearentireBTN";
+            this.clearentireBTN.Size = new System.Drawing.Size(96, 59);
+            this.clearentireBTN.TabIndex = 21;
+            this.clearentireBTN.Text = "CE";
+            this.clearentireBTN.UseVisualStyleBackColor = true;
             // 
-            // button22
+            // clearBTN
             // 
-            this.button22.FlatAppearance.BorderSize = 0;
-            this.button22.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button22.Location = new System.Drawing.Point(205, 193);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(96, 59);
-            this.button22.TabIndex = 22;
-            this.button22.Text = "C";
-            this.button22.UseVisualStyleBackColor = true;
+            this.clearBTN.FlatAppearance.BorderSize = 0;
+            this.clearBTN.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearBTN.Location = new System.Drawing.Point(205, 193);
+            this.clearBTN.Name = "clearBTN";
+            this.clearBTN.Size = new System.Drawing.Size(96, 59);
+            this.clearBTN.TabIndex = 22;
+            this.clearBTN.Text = "C";
+            this.clearBTN.UseVisualStyleBackColor = true;
+            this.clearBTN.Click += new System.EventHandler(this.clearBTN_Click);
             // 
-            // button23
+            // backspaceBTN
             // 
-            this.button23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button23.BackgroundImage")));
-            this.button23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button23.FlatAppearance.BorderSize = 0;
-            this.button23.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button23.Location = new System.Drawing.Point(306, 193);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(94, 59);
-            this.button23.TabIndex = 23;
-            this.button23.UseVisualStyleBackColor = true;
+            this.backspaceBTN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backspaceBTN.BackgroundImage")));
+            this.backspaceBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.backspaceBTN.FlatAppearance.BorderSize = 0;
+            this.backspaceBTN.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backspaceBTN.Location = new System.Drawing.Point(306, 193);
+            this.backspaceBTN.Name = "backspaceBTN";
+            this.backspaceBTN.Size = new System.Drawing.Size(94, 59);
+            this.backspaceBTN.TabIndex = 23;
+            this.backspaceBTN.UseVisualStyleBackColor = true;
+            this.backspaceBTN.Click += new System.EventHandler(this.backspaceBTN_Click);
             // 
             // label1
             // 
@@ -377,6 +389,7 @@ namespace Calculator_20_42161_1_
             // 
             this.calcTB.BackColor = System.Drawing.SystemColors.Control;
             this.calcTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.calcTB.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.calcTB.Font = new System.Drawing.Font("Segoe UI Semibold", 34.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calcTB.Location = new System.Drawing.Point(12, 63);
             this.calcTB.Name = "calcTB";
@@ -384,6 +397,7 @@ namespace Calculator_20_42161_1_
             this.calcTB.TabIndex = 26;
             this.calcTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.calcTB.TextChanged += new System.EventHandler(this.calcTB_TextChanged);
+            this.calcTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.calcTB_KeyPress);
             // 
             // Calculator
             // 
@@ -392,15 +406,15 @@ namespace Calculator_20_42161_1_
             this.ClientSize = new System.Drawing.Size(404, 583);
             this.Controls.Add(this.calcTB);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button23);
-            this.Controls.Add(this.button22);
-            this.Controls.Add(this.button21);
-            this.Controls.Add(this.button20);
-            this.Controls.Add(this.button19);
-            this.Controls.Add(this.button18);
-            this.Controls.Add(this.button17);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.button15);
+            this.Controls.Add(this.backspaceBTN);
+            this.Controls.Add(this.clearBTN);
+            this.Controls.Add(this.clearentireBTN);
+            this.Controls.Add(this.percentBTN);
+            this.Controls.Add(this.onebyxBTN);
+            this.Controls.Add(this.squareBTN);
+            this.Controls.Add(this.rootBTN);
+            this.Controls.Add(this.divideBTN);
+            this.Controls.Add(this.multiBTN);
             this.Controls.Add(this.minusBTN);
             this.Controls.Add(this.plusBTN);
             this.Controls.Add(this.nineBTN);
@@ -445,15 +459,15 @@ namespace Calculator_20_42161_1_
         private System.Windows.Forms.Button nineBTN;
         private System.Windows.Forms.Button plusBTN;
         private System.Windows.Forms.Button minusBTN;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button multiBTN;
+        private System.Windows.Forms.Button divideBTN;
+        private System.Windows.Forms.Button rootBTN;
+        private System.Windows.Forms.Button squareBTN;
+        private System.Windows.Forms.Button onebyxBTN;
+        private System.Windows.Forms.Button percentBTN;
+        private System.Windows.Forms.Button clearentireBTN;
+        private System.Windows.Forms.Button clearBTN;
+        private System.Windows.Forms.Button backspaceBTN;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox calcTB;
     }
